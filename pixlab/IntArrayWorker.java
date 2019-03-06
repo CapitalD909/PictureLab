@@ -6,6 +6,7 @@ public class IntArrayWorker
   /** set the matrix to the passed one
     * @param theMatrix the one to use
     */
+   
   public void setMatrix(int[][] theMatrix)
   {
     matrix = theMatrix;
@@ -99,11 +100,32 @@ public class IntArrayWorker
     }
   }
  public int getCount(int n){
-     for (int i=0; i<matrix.length; i++)
-        for (int j=0; j<matrix[0].length; j++){
-
-
+     int count = 0;
+    for (int[] row: matrix){
+        for (int pixel :row){
+            if (pixel==n)
+               count++;
+            }
+        }
+    return count;
+  }
+ public int getLargest (){
+     int max = matrix[0][0];
+     for (int[] row: matrix){
+         for (int pixel : row){
+             if (pixel>max)
+                max=pixel;
+            }
+        }
+        return max;
     }
-    return 1;
+    
+ public int getColTotal(int n){
+     int colsum = matrix [0][0];
+     for (int[] col : matrix){
+         colsum+= col[n];
+        }
+        return colsum;
+     
 }
 }
