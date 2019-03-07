@@ -16,6 +16,12 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+  public static void testKeepOnlyBlue(){
+      Picture xeno2 = new Picture ("xeno2.jpg");
+      xeno2.explore();
+      xeno2.keepOnlyBlue();
+      xeno2.explore();
+    }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -58,6 +64,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    
     testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();

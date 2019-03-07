@@ -79,7 +79,7 @@ public class SimplePicture implements DigitalPicture
   * @param width the desired width
   * @param height the desired height
   */
- public  SimplePicture(int width, int height)
+ public SimplePicture(int width, int height)
  {
    bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
    title = "None";
