@@ -139,7 +139,7 @@ public class Picture extends SimplePicture
             for (Pixel[] rowArray : pixels){
                 for (Pixel pixelObj: rowArray){
                     
-                   pixelObj.setRed(pixelObj.getRed() * 10);
+                   pixelObj.setRed(pixelObj.getRed() * 6);
                     
                 }
             }
