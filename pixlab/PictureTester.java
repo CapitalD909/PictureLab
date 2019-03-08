@@ -34,6 +34,12 @@ public class PictureTester
       rob.grayscale();
       rob.explore();
     }
+    public static void testFixUnderwater(){
+        Picture under = new Picture ("water.jpg");
+        under.explore();
+        under.fixUnderwater();
+        under.explore();
+    }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
