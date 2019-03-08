@@ -17,10 +17,22 @@ public class PictureTester
     beach.explore();
   }
   public static void testKeepOnlyBlue(){
-      Picture xeno2 = new Picture ("xeno2.jpg");
-      xeno2.explore();
-      xeno2.keepOnlyBlue();
-      xeno2.explore();
+      Picture beach = new Picture ("beach.jpg");
+      beach.explore();
+      beach.keepOnlyBlue();
+      beach.explore();
+    }
+  public static void testNegate(){
+      Picture rob = new Picture ("rob.png");
+      rob.explore();
+      rob.negate();
+      rob.explore();
+    }
+  public static void testGrayscale(){
+      Picture rob = new Picture ("rob.png");
+      rob.explore();
+      rob.grayscale();
+      rob.explore();
     }
   
   /** Method to test mirrorVertical */
