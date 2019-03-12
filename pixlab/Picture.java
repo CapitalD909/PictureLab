@@ -164,16 +164,63 @@ public class Picture extends SimplePicture
     }
 }
    
-  public void mirrorHorizontal(){
+
+              
+   public void mirrorHorizontal() {
       Pixel[][] pixels = this.getPixels2D();
       Pixel topPixel = null;
       Pixel bottomPixel = null;
       int height = pixels.length;
-      for (int row = 0; row <height; row++){
-          for (int col = 0; col >pixels.length; col ++){
-              
+      for (int row = 0; row < height; row++)
+      {
+          for (int col = 0; col < pixels[0].length; col++)
+          {
+              topPixel = pixels[row][col];
+              bottomPixel = pixels[height - 1 - row][col];
+              bottomPixel.setColor(topPixel.getColor());
+          }
+      }
+  }
+  
+  public void mirrorHorizontalBotToTop() {
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel topPixel = null;
+      Pixel bottomPixel = null;
+      int height = pixels.length;
+      for (int row = 0; row < height; row++)
+      {
+          for (int col = 0; col < pixels[0].length; col++)
+          {
+              topPixel = pixels[row][col];
+              bottomPixel = pixels[height - 1 - row][col];
+              topPixel.setColor(bottomPixel.getColor());
+          }
+      }
+  }
+  
+    public void mirrorDiagonal(){
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel orig = null;
+      Pixel img = null;
+      int maxxxxx;
+      if (pixels.length < pixels[0].length){ 
+          maxxxxx = pixels.length;
+      }
+      else{
+          maxxxxx = pixels[0].length;
+       }
       
-      
+      for (int row = 0; row < maxxxxx; row++)
+      {
+          for (int col = row; col < maxxxxx; col++)
+          {
+              orig = pixels[row][col];
+              img = pixels[col][row];
+              img.setColor(orig.getColor());
+          }
+      }
+  }
+    
    
   
                     
