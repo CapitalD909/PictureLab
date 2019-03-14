@@ -95,7 +95,16 @@ public class PictureTester
       gull.mirrorGull();
       gull.explore();
     }
-  
+  public static void testCopy(){
+      Picture ocean = new Picture ("beach.jpg");
+      Picture two = new Picture ("snowman.jpg");
+      ocean.copy(two,10, 10, 60, 160, 180, 230);
+      ocean.explore();
+      
+      
+      
+      
+    }
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -114,7 +123,7 @@ public class PictureTester
   }
   
   public static void testMyCollage(){
-      Picture canvas = new Picture ("640x480.jpg");
+      Picture canvas = new Picture("640x480.jpg");
       canvas.myCollage();
       canvas.explore();
     }
@@ -140,7 +149,7 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
